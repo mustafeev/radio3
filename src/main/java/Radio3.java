@@ -1,26 +1,35 @@
 public class Radio3 {
     private int currentStation;
     private int currentVolume;
-    int maxStation;
+    private int maxStation;
+    private int maxVolume;
+
     public Radio3() {
-        maxStation = 9;
-
+        maxStation =9;
     }
-    public Radio3(int stationsCount){
-        maxStation = stationsCount - 1;
 
+    public void Radio4() {
+        maxVolume =10;
     }
-    public void next () {
-        if (currentStation < maxStation ) {
+    public Radio3 (int stationCount) {
+        maxStation = stationCount -1;
+    }
+    public void Radio5 (int volumeCount) {
+        maxStation = volumeCount -1;
+    }
+
+    public void next() {
+        if (currentStation < maxStation) {
             currentStation++;
         } else {
             currentStation = 0;
         }
     }
+
     public void prev() {
         if (currentStation > 0) {
             currentStation--;
-        }else{
+        } else {
             currentStation = maxStation;
         }
     }
@@ -30,10 +39,11 @@ public class Radio3 {
     }
 
     public void setCurrentStation(int currentStation) {
-        if  (currentStation < 0 ) {
+        if (currentStation < 0) {
             return;
         }
-        if (currentStation > maxStation ) {
+        if (currentStation > maxStation) {
+
             return;
         }
         this.currentStation = currentStation;
@@ -44,26 +54,28 @@ public class Radio3 {
     }
 
     public void setCurrentVolume(int currentVolume) {
-        if  (currentVolume < 0 ) {
+        if (currentVolume < 0) {
             return;
         }
-        if (currentVolume > 10 ) {
+        if (currentVolume > maxVolume) {
             return;
         }
         this.currentVolume = currentVolume;
     }
-    public void nextVolume () {
-        if (currentVolume < 10 ) {
+
+    public void nextVolume1() {
+        if (currentVolume < maxVolume) {
             currentVolume++;
         } else {
-            currentStation = 0;
+            currentVolume = 0;
         }
     }
-    public void prevVolume() {
+
+    public void prevVolume1() {
         if (currentVolume > 0) {
             currentVolume--;
-        }else{
-            currentVolume = 10;
+        } else {
+            currentVolume = maxVolume;
         }
     }
 }
