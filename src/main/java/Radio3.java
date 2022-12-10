@@ -5,17 +5,19 @@ public class Radio3 {
     private int maxVolume;
 
     public Radio3() {
-        maxStation =9;
+        maxStation = 9;
     }
 
     public void Radio4() {
-        maxVolume =10;
+        maxVolume = 10;
     }
-    public Radio3 (int stationCount) {
-        maxStation = stationCount -1;
+
+    public Radio3(int stationCount) {
+        maxStation = stationCount - 1;
     }
-    public void Radio5 (int volumeCount) {
-        maxStation = volumeCount -1;
+
+    public void Radio5(int volumeCount) {
+        maxStation = volumeCount - 1;
     }
 
     public void next() {
